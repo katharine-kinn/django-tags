@@ -19,7 +19,7 @@ Quick start
 Usage
 -----
 
-	from tags_app import models as tag_models
-	...
-	class TaggedItem(models.Model):
-		__metaclass__ = tag_models.TagMeta
+    from tags_app import models as tag_models
+    ...
+    class TaggedItem(models.Model):
+        __metaclass__ = tag_models.TagMeta
