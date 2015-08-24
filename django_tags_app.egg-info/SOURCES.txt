@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+django_tags_app.egg-info/PKG-INFO
+django_tags_app.egg-info/SOURCES.txt
+django_tags_app.egg-info/dependency_links.txt
+django_tags_app.egg-info/top_level.txt
+tags_app/__init__.py
+tags_app/admin.py
+tags_app/forms.py
+tags_app/models.py
+tags_app/tests.py
+tags_app/views.py
