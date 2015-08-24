@@ -25,3 +25,12 @@ Usage
     ...
     class TaggedItem(models.Model):
         __metaclass__ = tag_models.TagMeta
+
+2. To use special tag input in your model forms::
+
+	from tags_app import forms as tag_forms
+	...
+	TaggedItemTagForm = tag_forms.tag_form_class_factory(TaggedItem, bases=())
+	...
+	tagged_item_form = TaggedItemTagForm(instance=tagged_item)
+
