@@ -19,6 +19,8 @@ Quick start
 Usage
 -----
 
+1. Set TagMeta as metaclass of your tagged model::
+
     from tags_app import models as tag_models
     ...
     class TaggedItem(models.Model):
