@@ -12,7 +12,7 @@ setup(
     version='0.1.1',
     packages=['tags_app'],
     include_package_data=True,
-    license='BSD License',  # example license
+    license='BSD License',
     description='Simple app to add tags to your existing models',
     long_description=README,
     url='http://www.example.com/',
@@ -22,7 +22,7 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License', # example license
+        'License :: OSI Approved :: BSD License', 
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         # Replace these appropriately if you are stuck on Python 2.
