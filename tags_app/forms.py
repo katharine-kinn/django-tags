@@ -4,7 +4,7 @@ from django.utils.translation import ugettext
 from django.utils.safestring import mark_safe
 from django.utils.html import format_html
 
-from tags_app.models import *
+from tags_app.models import Tag
 
 class TagStringInput(forms.TextInput):
 
@@ -35,17 +35,17 @@ class TagInputForm(forms.Form):
 	tags_to_add = forms.CharField(max_length=255, label=_("Tags"), widget=TagStringInput())
 
 	def __init__(self, *args, **kwargs):
-
-		# self.tag_model = self.tagged_instance_type.tags.through.tag.field.rel.to
-
 		instance = None
 		if "instance" in kwargs:
 			instance = kwargs.pop("instance")
 		super(TagInputForm, self).__init__(*args, **kwargs)
+
 		self.initial = {'tags_to_add':_("Add tags...")}
 		if instance:
 			tag_str = ''
-			tag_ids = self.tagged_instance_type.tags.through.objects.filter(**{instance.tagged_field_through: instance.id}).values_list('tag', flat=True)
+			tag_ids = self.tagged_instance_type.tags.through.objects.filter(
+                    **{instance.tagged_field_through: instance.id}
+                ).values_list('tag', flat=True)
 
 			if tag_ids:
 				self.tag_ids = tag_ids
